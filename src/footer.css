@@ -1,0 +1,29 @@
+.footer {
+  background-color: #ed0037;
+  text-align: center;
+  height: 100px;
+}
+.footerText {
+  font-family: 'Arbutus Slab', serif;
+  color: rgba(255,255,255,0.4);
+  font-size: 25px;
+  padding-top: 10px;
+}
+.footerLink {
+  font-family: 'Arbutus Slab', serif;
+  font-weight: bold;
+  color: rgba(255,255,255,0.5) !important;
+  cursor: pointer;
+  transition: 0.1s;
+  text-decoration: none;
+}
+.footerLink:hover {
+  color: rgba(255,255,255,0.8) !important;
+  transition: 0.2s;
+  text-shadow: 1px 1px 5px white;
+}
+@media screen and (max-width: 769px) {
+  .footerText {
+    font-size: 18px;
+  }
+}

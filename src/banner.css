@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  user-select: none;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+body {
+  overflow-y: hidden;
+}
+.loadingLogo {
+  position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100vw;
+	height: 100vh;
+	z-index: 9999;
+	background: url("../assets/img/loading.gif") center no-repeat #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header {
+  z-index: 9;
+  position: fixed;
+  background-color: #f65a7e;
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+  color: white;
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: 0.5s ease-in-out;
+  font-family: 'Shadows Into Light', cursive;
+  font-weight: 900;
+  font-size: 30px;
+}
+.homeTitle {
+  cursor: pointer;
+  transition: 0.25s;
+}
+.homeTitle:hover {
+  text-shadow: 1px 1px 5px white;
+  transition: 0.4s;
+}
+.scrolled {
+  z-index: 9;
+  position: fixed;
+  background-color: #f65a7e;
+  width: 100%;
+  padding: 10px;
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: 0.5s ease-in-out;
+}
+.scrolled>.homeTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.show {
+  transform: translateY(0);
+  opacity: 1;
+  transition: 0.5s ease-in-out;
+}
+.banner {
+  background: url("../assets/photos/banner_large.jpg") no-repeat right center;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: background-image 1.25s linear;
+}
+.banner.slideshow {
+  background-image: url("../assets/photos/landscape/landscape (4).jpg");
+  transition: background-image 1.25s linear;
+}
+.bannerOverlay {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.scrolled>.homeTitle>p {
+  color: white;
+  font-family: 'Shadows Into Light', cursive;
+  font-weight: 900;
+  font-size: 30px;
+  text-align: center;
+}
+.scrolled>.homeTitle>p:first-child:before {
+  content: "Eunkyung Kim";
+}
+.scrolled>.homeTitle>p:nth-child(3):before {
+  content: "Minhyeong Joe";
+}
+.bannerOverlay>p {
+  font-family: 'Shadows Into Light', cursive;
+  color: white;
+  font-size: 40px;
+  text-align: center;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+.bannerOverlay>div, .scrolled>.homeTitle>div {
+  position: relative;
+  margin: 0 20px;
+}
+.dateCount {
+  color: white;
+  font-size: 25px;
+  position: absolute;
+  top:40%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Arbutus Slab', serif;
+}
+.dateCount.small {
+  font-size: 14px;
+  font-family: 'Arbutus Slab', serif;
+}
+#about {
+  width: 760px;
+  margin: auto;
+  text-align: center;
+}
+#about>h1 {
+  padding: 30px 0 10px 0;
+}
+#about>p {
+  color: #555;
+}
+#about>p:last-of-type {
+  margin-bottom: 10px;
+}
+#about>ul {
+  text-align: left;
+}
+
+@media screen and (max-width: 768px) {
+  .banner {
+    background: url("../assets/photos/banner_small.jpg") no-repeat center center;
+    background-size: cover;
+  }
+  .banner.slideshow {
+    background-image: url("../assets/photos/portrait/portrait (6).jpg");
+  }
+  .scrolled>.homeTitle>p:first-child:before {
+    content: "Eunkyung";
+  }
+  .scrolled>.homeTitle>p:nth-child(3):before {
+    content: "Minhyeong";
+  }
+  .header {
+    font-size: 24px;
+  }
+  .bannerOverlay {
+    flex-direction: column;
+  }
+  .bannerOverlay>div {
+    margin: 30px 0;
+  }
+  #about {
+    width: 90%;
+  }
+}

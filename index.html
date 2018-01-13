@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Photo Gallery</title>
+    <link rel="icon" href="assets/img/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.5.0-alpha.1/jquery.mobile-1.5.0-alpha.1.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.5.0-alpha.1/jquery.mobile-1.5.0-alpha.1.min.js"></script>
+    <link rel="stylesheet" href="src/banner.css">
+    <link rel="stylesheet" href="src/gallery.css">
+    <link rel="stylesheet" href="src/footer.css">
+    <script src="src/loading.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light|Arbutus+Slab|Bad+Script" rel="stylesheet">
+  </head>
+  <body>
+
+    <div class="loadingLogo"></div>
+
+    <div class="header show">
+      <div class="homeTitle">
+        <p>EK&#9825;MJ PHOTO GALLERY</p>
+      </div>
+    </div>
+
+    <div class="scrolled">
+      <div class="homeTitle">
+        <p></p>
+        <div>
+          <img src="assets/img/dateCountHeart.png" width="50px" alt="">
+          <p class="dateCount small"></p>
+        </div>
+        <p></p>
+      </div>
+    </div>
+
+    <div class="banner">
+      <div class="bannerOverlay">
+        <p>Eunkyung Kim</p>
+        <div>
+          <img src="assets/img/dateCountHeart.png" width="100px" alt="">
+          <p class="dateCount"></p>
+        </div>
+        <p>Minhyeong Joe</p>
+      </div>
+    </div>
+
+    <div id="about">
+      <h1>PHOTO GALLERY SLIDER</h1>
+      <p>This website showcases some of available features you can expect from me.</p>
+      <p>Features include, but are not limited to: </p>
+      <ul>
+        <li><strong>Auto-slide:</strong> The Banner image automatically changes every timeframe. Can be added on slider as well.</li>
+        <li><strong>Random-order:</strong> Something you might or might not need. On page reload, the order of images is randomized.</li>
+        <li><strong>Album-view:</strong> Preview what is in the album by <strong>hovering</strong> over each album, and <strong>click</strong> to expand the album.</li>
+        <li><strong>Thumbnail-view:</strong> You can see thumbnails of images and click on them to navigate to specific image.</li>
+        <li><strong>Fullscreen-view:</strong> Click on active image to see it in full-screen mode.</li>
+        <li><strong>Mobile-friendly:</strong> Responsive to all devices, and simply swipe to slide the images.</li>
+      </ul>
+    </div>
+
+    <div class="albums">
+      <div class="albumContainer portrait">
+        <div class="album portrait">
+
+        </div>
+        <p>Portrait Album</p>
+      </div>
+      <div class="albumContainer landscape">
+        <div class="album landscape">
+
+        </div>
+        <p>Landscape Album</p>
+      </div>
+
+    </div>
+
+
+    <div class="gallery">
+      <div class="portraitAlbum show">
+        <div class="slideWrapper portrait">
+          <div class="left portrait">&#10094;</div>
+          <div class="slides portrait">
+
+          </div>
+          <div class="right portrait">&#10095;</div>
+        </div>
+
+        <div class="thumbnailWrapper portrait">
+
+        </div>
+      </div>
+
+      <div class="landscapeAlbum">
+        <div class="slideWrapper landscape">
+          <div class="left landscape">&#10094;</div>
+          <div class="slides landscape">
+
+          </div>
+          <div class="right landscape">&#10095;</div>
+        </div>
+
+        <div class="thumbnailWrapper landscape">
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer">
+      <p class="footerText">© 2017 All Rights Reserved</p>
+      <br/>
+      <a href= "https://mj-webdev.com" target="_blank" class="footerLink">Minhyeong Billy Joe</a>
+    </div>
+
+    <script src="src/script.js"></script>
+  </body>
+</html>
